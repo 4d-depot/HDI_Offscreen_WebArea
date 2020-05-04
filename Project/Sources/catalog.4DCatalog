@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="data" uuid="2D4F6103DC084198BFC0283C03D0A0B2" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="INFO" uuid="107A367EBCC346259FD971E8FC1097DA" id="1">
+		<field name="ID" uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="Description" uuid="C9EFE648E9234AADA33FB25D61C0190B" type="10" never_null="true" id="2">
+			<field_extra position="4"/>
+		</field>
+		<field name="TabTitle" uuid="58AF214936C941439CB263026A5B46ED" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra position="3"/>
+		</field>
+		<field name="PageNumber" uuid="A2D86BBFD5134D06999CBDD14FD07A27" type="4" never_null="true" id="4">
+			<field_extra position="2"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info fields_ordering="2" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="0" top="0" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Data" uuid="6087759CEFA17B459E9FAA199AA4C6C4" id="2">
+		<field name="ID" uuid="AB1DD05CAA45E348A3D7E28DF9783328" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Country" uuid="5AF374F8157260488B88FEFC1099B2DE" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="Popularity" uuid="827251DE7CB6984B9CF5CE5C15DF54D0" type="4" never_null="true" id="3"/>
+		<field name="ISO2" uuid="D3CC4014EA6F0D4D8658609BBA93AA86" type="10" limiting_length="255" never_null="true" id="4"/>
+		<primary_key field_name="ID" field_uuid="AB1DD05CAA45E348A3D7E28DF9783328"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="183" top="4" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Continent" uuid="FA058CFFDFFACC4F9C43EEB23CD1880D" id="3">
+		<field name="ID" uuid="E3E3D636A4B2944588B40D0FFB97B804" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Code" uuid="A5D858E4A49746439A3E6643A749F4FE" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="Name" uuid="45F6FD0ACA05844C93DE443663210691" type="10" limiting_length="255" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="E3E3D636A4B2944588B40D0FFB97B804"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="364" top="6" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="B17E3BF54450493DB72FBD48A5745784" type="7">
+		<field_ref uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B" name="ID">
+			<table_ref uuid="107A367EBCC346259FD971E8FC1097DA" name="INFO"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="DFB7D0F6D9CBCF4D97127EAE4249FA4B" type="7">
+		<field_ref uuid="AB1DD05CAA45E348A3D7E28DF9783328" name="ID">
+			<table_ref uuid="6087759CEFA17B459E9FAA199AA4C6C4" name="Data"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="E45D234514B4EE49A512BE211CFF58C0" type="7">
+		<field_ref uuid="E3E3D636A4B2944588B40D0FFB97B804" name="ID">
+			<table_ref uuid="FA058CFFDFFACC4F9C43EEB23CD1880D" name="Continent"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0" package_name="HDI_Template_v18" structure_file_name="HowDoI" data_file_path=":HowDoI.4DD">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

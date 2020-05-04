@@ -1,0 +1,10 @@
+*** Full Backup
+Creating archive : C:\Users\Lenovo\Desktop\HDI_Offscreen_WebArea.4dbase\HDI_Offscreen_WebArea.4dbase\data[0001].4BK
+Attachment(s): 
+	C:\Users\Lenovo\Desktop\HDI_Offscreen_WebArea.4dbase\HDI_Offscreen_WebArea.4dbase\Data\data.4DSyncHeader [NOT FOUND]
+	C:\Users\Lenovo\Desktop\HDI_Offscreen_WebArea.4dbase\HDI_Offscreen_WebArea.4dbase\Data\data.4DSyncData [NOT FOUND]
+	C:\Users\Lenovo\Desktop\HDI_Offscreen_WebArea.4dbase\HDI_Offscreen_WebArea.4dbase\Data\data.4DIndx [OK]
+Scheduled 00/00/0 00:00
+Starting 17/03/2020 11:40
+Ending 17/03/2020 11:40
+

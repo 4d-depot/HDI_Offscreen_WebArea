@@ -1,0 +1,391 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 800,
+	"windowMaxWidth": 32000,
+	"windowMinHeight": 540,
+	"windowMaxHeight": 32000,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 920,
+					"height": 606,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": 0,
+					"left": 480,
+					"height": 640,
+					"visibility": "hidden",
+					"sizingY": "grow",
+					"stroke": "#800080",
+					"strokeDashArray": "1 1",
+					"width": 0,
+					"startPoint": "topLeft"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information": {
+					"type": "input",
+					"top": 80,
+					"left": 80,
+					"width": 800,
+					"height": 480,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"information2": {
+					"type": "input",
+					"top": 56,
+					"left": 33,
+					"width": 876,
+					"height": 64,
+					"sizingY": "fixed",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Bouton": {
+					"type": "button",
+					"text": "Create Picture",
+					"top": 520,
+					"left": 106,
+					"width": 121,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Bouton.4dm"
+				},
+				"Zone de saisie5": {
+					"type": "input",
+					"left": 324,
+					"top": 151,
+					"width": 600,
+					"height": 400,
+					"dataSourceTypeHint": "picture",
+					"dataSource": "Form:C1466.picture",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "automatic",
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"method": "ObjectMethods/Zone de saisie5.4dm"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 33,
+					"top": 153,
+					"width": 266,
+					"height": 279,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data",
+					"singleClickEdit": true,
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Country",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"dataSource": "This:C1470.Country",
+							"footer": {
+								"name": "Footer1"
+							},
+							"enterable": false,
+							"width": 161
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Number"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.Popularity",
+							"dataSourceTypeHint": "number",
+							"footer": {
+								"name": "Footer2"
+							},
+							"width": 88
+						}
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 126,
+					"left": 807,
+					"width": 117,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Picture created from the Google Chart:",
+					"top": 131,
+					"left": 324,
+					"width": 237,
+					"height": 15,
+					"fontWeight": "bold"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 140,
+					"top": 471,
+					"width": 87,
+					"height": 16,
+					"dataSource": "Form:C1466.color1"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Color",
+					"top": 468,
+					"left": 232,
+					"width": 67,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Map color",
+					"top": 472,
+					"left": 33,
+					"width": 98,
+					"height": 15
+				}
+			}
+		},
+		{
+			"objects": {
+				"WPArea": {
+					"type": "write",
+					"left": 309,
+					"top": 153,
+					"width": 619,
+					"height": 466,
+					"events": [],
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"layoutMode": "page",
+					"showHeaders": false,
+					"showFooters": false,
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"dataSource": "WPArea",
+					"contextMenu": "none"
+				},
+				"information1": {
+					"type": "input",
+					"top": 56,
+					"left": 33,
+					"width": 876,
+					"height": 64,
+					"sizingY": "fixed",
+					"dataSource": "Infos[2].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingX": "grow"
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"left": 106,
+					"top": 153,
+					"width": 193,
+					"height": 26,
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/Popup Dropdown List.4dm",
+					"dataSource": "Region"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 126,
+					"left": 807,
+					"width": 117,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace"
+				},
+				"List Box1": {
+					"type": "listbox",
+					"left": 33,
+					"top": 188,
+					"width": 266,
+					"height": 244,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data",
+					"singleClickEdit": true,
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Country",
+								"name": "Header3"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.Country",
+							"footer": {
+								"name": "Footer3"
+							},
+							"enterable": false,
+							"width": 161
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Number"
+							},
+							"name": "Column4",
+							"dataSource": "This:C1470.Popularity",
+							"dataSourceTypeHint": "number",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 88
+						}
+					]
+				},
+				"Bouton1": {
+					"type": "button",
+					"text": "Create Picture",
+					"top": 520,
+					"left": 106,
+					"width": 121,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Bouton1.4dm"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Continent:",
+					"top": 159,
+					"left": 33,
+					"width": 101,
+					"height": 15,
+					"fontWeight": "bold"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 140,
+					"top": 471,
+					"width": 87,
+					"height": 16,
+					"dataSource": "Form:C1466.color1"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Color",
+					"top": 468,
+					"left": 232,
+					"width": 67,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Map color",
+					"top": 472,
+					"left": 33,
+					"width": 98,
+					"height": 15
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed"
+}

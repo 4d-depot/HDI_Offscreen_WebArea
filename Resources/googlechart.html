@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      
+      var _4dCountries=[];
+      var _4dRegion="";
+      var _4dColors=[];
+
+      function GenerateGoogleChart(countries,region,colors){
+        _4dCountries=countries;
+        _4dRegion=region;
+        _4dColors=colors;
+        google.charts.load('current', {
+          'packages':['geochart']
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+      }
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable(_4dCountries);
+
+        var options = {height:400,width:600,backgroundColor:'#81d4fa'};
+
+        if (_4dColors.colors.length>0){
+          options.colorAxis= _4dColors;
+        }
+
+        if (_4dRegion!=""){ 
+          options.region=_4dRegion;
+          options.displayMode="regions";
+          options.datalessRegionColor= 'LightGrey';
+          options.defaultColor= '#f5f5f5';
+        }
+
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+        google.visualization.events.addListener(chart, 'ready', function () {
+        chart_div.innerHTML = '<img id="chart" src="' + chart.getImageURI() + '">';
+        $4d.ChartImage(document.getElementById('chart').src.slice(22));
+      });
+
+
+      }
+    </script>
+  </head>
+  <body>
+    
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
