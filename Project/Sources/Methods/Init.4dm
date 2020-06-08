@@ -15,6 +15,7 @@ Region:=1
 
 WParea:=WP Import document:C1318(Get 4D folder:C485(Current resources folder:K5:16)+"googleAPI.4wp")
 
+Form:C1466.picture:=cs:C1710.GraphCreation.new("";"").start()
 
-
-
+PictureWP:=cs:C1710.GraphCreation.new(Form:C1466.continent[Region-1].Code;"").start()
+RegionNameWP:=Form:C1466.continent[Region-1].Name

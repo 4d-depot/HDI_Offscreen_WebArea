@@ -4,7 +4,7 @@ If (Bool:C1537(Form:C1466.trace))
 End if 
 
 If (region>0)
-	PictureWP:=GraphCreation (Form:C1466.continent[Region-1].Code)
+	PictureWP:=cs:C1710.GraphCreation.new(Form:C1466.continent[Region-1].Code;Form:C1466.color1).start()
 	RegionNameWP:=Form:C1466.continent[Region-1].Name
 End if 
 
