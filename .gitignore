@@ -1,6 +1,3 @@
-$ cat p4ignore 
-
-
 # No user preferences
 userPreferences.*/
 
